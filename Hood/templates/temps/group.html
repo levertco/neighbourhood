@@ -1,0 +1,42 @@
+{% extends 'temps/base.html' %}
+
+{% load static %}
+{% block content %}
+{{ block.super }}
+
+
+
+
+
+
+<div class="container">
+<div class="row">
+        {% for gro in group %} 
+    <div class="col-sm-4">
+                
+        <div class="card" >
+            
+            <div class="card-body">
+              <h4 class="card-title">{{gro.neighbourhood_name}}</h4>
+              <p class="card-text">Location:{{gro.neighbourhood_location}}</p>
+              <p class="card-text"><span class="badge badge-primary">Occupant {{gro.occupant_count}}</span></p>
+              <P class="card-text" >Admin:{{gro.admin}}</P>
+              <a href="#" class="btn btn-primary">Join</a>
+            </div>
+            
+          </div>
+         
+    </div>
+    {% endfor %}
+</div>
+
+
+</div>
+
+
+
+  
+
+
+
+{% endblock  %}

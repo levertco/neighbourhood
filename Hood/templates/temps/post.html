@@ -1,0 +1,28 @@
+{% extends 'temps/base.html' %}
+{% load static %}
+{% block content %}
+{{ block.super }}
+
+<div class="Instagram-card">{% for up in update %}
+
+    <div class="Instagram-card-image">
+        {% if up.image %}
+      <img src= "{{up.image.url}}" height="400px" width="600px"/>
+      <p>{{up.image_caption}}</p>
+      {% endif %}
+    </div>
+     
+    <div class="Instagram-card-content">
+     <p>{{up.profile.username}}</p>
+    <hr>
+    
+    </div> 
+    <div class="Instagram-card-footer">
+      <a class="footer-action-icons"href="#"><i class="fa fa-thumbs-up" ></i></a>
+      <div></div>
+ <a class="footer-action-icons"href="#"><i class="fa fa-thumbs-down"></i></a>
+    </div>
+    {%endfor%}
+ 
+  </div>
+{% endblock  %}

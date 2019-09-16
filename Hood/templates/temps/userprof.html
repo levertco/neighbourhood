@@ -1,0 +1,31 @@
+{% extends 'temps/base.html' %}
+
+{% load static %}
+{% block content %}
+{{ block.super }}
+
+
+{% for profile in profiles%}
+<div class="container">
+    <div class="row">
+        
+<div class="card">
+
+        {% if profile.id == user.id%}
+        <img class="img-fluid" src="{{profile.profile_photo.url}}" height="400" width="400"alt="Card image cap">
+        
+        <div class="card-body">
+            
+            <h4 class="card-title"></h4>
+            
+            <p class="card-text">{{profile.user.username}}</p>
+            <p class="card-text">{{profile.name}}</p>
+            <p class="card-text">{{profile.email}}</p>
+            <!-- <a href="#" class="btn btn-primary">Follow</a> -->
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+
+
+{% endblock  %}
