@@ -42,7 +42,7 @@ InstagramAPI==1.0.2
 itsdangerous==1.1.0
 Jinja2==2.10
 Mako==1.0.7
-markdown2==2.3.8
+markdown2==2.4.0
 MarkupSafe==1.1.0
 mock==3.0.5
 moviepy==0.2.3.2
